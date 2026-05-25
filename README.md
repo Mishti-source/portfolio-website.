@@ -15,6 +15,20 @@ A highly polished, performance-optimized personal portfolio website built entire
 - **Iconography:** Font Awesome Web Fonts
 
 ---
+## 📸 Interface Preview
+Visual evidence demonstrating pixel-perfect typography alignment, component fluid response, and layout scaling across distinct viewport dimensions.
+
+### 1. Desktop Layout Viewport
+*Engineered configuration matching standard screen media thresholds (1280px+).*
+
+![Desktop System Layout Preview](assets/desktop.png)
+
+### 2. Mobile Fluid Breakpoint
+*Compact flex/grid structural organization shifting cleanly down to mobile boundaries (320px+).*
+
+![Mobile Device Breakpoint Layout Preview](assets/mobile.png)
+
+---
 
 ## 📁 Project Folder Structure
 ```text
@@ -28,7 +42,4 @@ portfolio-website/
 │   └── main.js         # Interactive engines, theme-switching, and form input validations
 │
 └── index.html          # Structural application entrypoint containing semantic markup
-<img width="532" height="864" alt="image" src="https://github.com/user-attachments/assets/b89e5519-c27d-4ae5-8630-f822633ddef<img width="1616" height="868" alt="Screenshot 2026-05-25 204335" src="https://github.com/user-attachments/assets/e52b9465-aafb-4680-962f-889fdeb1db9b" />
-<img width="532" height="864" alt="Screenshot 2026-05-25 204255" src="https://github.com/user-attachments/assets/14fb6ed7-ea7a-41a5-ad05-ddd6afb49b1f" />
-d" />
-<img width="1616" height="868" alt="image" src="https://github.com/user-attachments/assets/4cccde40-32ab-439e-a925-a436146532cc" />
+
