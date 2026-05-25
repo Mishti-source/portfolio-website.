@@ -28,5 +28,7 @@ portfolio-website/
 │   └── main.js         # Interactive engines, theme-switching, and form input validations
 │
 └── index.html          # Structural application entrypoint containing semantic markup
-<img width="532" height="864" alt="image" src="https://github.com/user-attachments/assets/b89e5519-c27d-4ae5-8630-f822633ddefd" />
+<img width="532" height="864" alt="image" src="https://github.com/user-attachments/assets/b89e5519-c27d-4ae5-8630-f822633ddef<img width="1616" height="868" alt="Screenshot 2026-05-25 204335" src="https://github.com/user-attachments/assets/e52b9465-aafb-4680-962f-889fdeb1db9b" />
+<img width="532" height="864" alt="Screenshot 2026-05-25 204255" src="https://github.com/user-attachments/assets/14fb6ed7-ea7a-41a5-ad05-ddd6afb49b1f" />
+d" />
 <img width="1616" height="868" alt="image" src="https://github.com/user-attachments/assets/4cccde40-32ab-439e-a925-a436146532cc" />
