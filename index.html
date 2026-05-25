@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        studio: {
+                            lightBg: '#fbfbfa',
+                            lightText: '#1c1b1a',
+                            darkBg: '#121212',
+                            darkText: '#f5f5f3',
+                            accent: '#8c7853'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="bg-studio-lightBg text-studio-lightText font-['Plus_Jakarta_Sans'] antialiased transition-colors duration-500 dark:bg-studio-darkBg dark:text-studio-darkText">
+
+    <header class="fixed top-0 left-0 w-full bg-studio-lightBg/80 backdrop-blur-md dark:bg-studio-darkBg/80 z-50 border-b border-stone-200/60 dark:border-stone-800/60">
+        <nav class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center" aria-label="Main Directory">
+            <a href="#home" class="font-['Playfair_Display'] font-semibold text-xl tracking-tight hover:text-studio-accent transition-colors">
+                Studio<span class="text-studio-accent">.</span>Dev
+            </a>
+            
+            <ul class="hidden md:flex space-x-8 text-xs font-medium tracking-widest uppercase">
+                <li><a href="#home" class="nav-link transition-colors duration-300">Home</a></li>
+                <li><a href="#about" class="nav-link transition-colors duration-300">About</a></li>
+                <li><a href="#skills" class="nav-link transition-colors duration-300">Skills</a></li>
+                <li><a href="#projects" class="nav-link transition-colors duration-300">Projects</a></li>
+                <li><a href="#experience" class="nav-link transition-colors duration-300">Experience</a></li>
+                <li><a href="#contact" class="nav-link transition-colors duration-300">Contact</a></li>
+            </ul>
+
+            <div class="flex items-center space-x-6">
+                <button id="theme-switcher" class="text-sm focus:outline-none hover:text-studio-accent transition-colors" aria-label="Toggle visual color scheme configuration">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:block"></i>
+                </button>
+                <button id="hamburger-trigger" class="md:hidden text-lg focus:outline-none" aria-label="Toggle system directory drawer">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <div id="mobile-menu-drawer" class="hidden md:hidden bg-studio-lightBg dark:bg-studio-darkBg border-t border-stone-200 dark:border-stone-800 px-8 py-8 space-y-4 text-left font-['Playfair_Display'] text-2xl italic">
+            <a href="#home" class="block hover:text-studio-accent transition-colors">Home.</a>
+            <a href="#about" class="block hover:text-studio-accent transition-colors">About.</a>
+            <a href="#skills" class="block hover:text-studio-accent transition-colors">Skills.</a>
+            <a href="#projects" class="block hover:text-studio-accent transition-colors">Projects.</a>
+            <a href="#experience" class="block hover:text-studio-accent transition-colors">Experience.</a>
+            <a href="#contact" class="block hover:text-studio-accent transition-colors">Contact.</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-screen flex items-center justify-center px-6 pt-20 bg-[#f7f6f3] dark:bg-[#161616]">
+            <div class="max-w-4xl w-full text-center md:text-left space-y-6">
+                <p class="text-xs font-semibold tracking-[0.3em] uppercase text-studio-accent">BASED IN NORDIC DIGITAL SPACES</p>
+                <h1 class="font-['Playfair_Display'] text-5xl md:text-7xl tracking-tight leading-none">
+                    Engineering clean interfaces through <span class="italic font-normal text-stone-500 dark:text-stone-400">thoughtful layout design</span>.
+                </h1>
+                <p class="text-lg font-light text-stone-600 dark:text-stone-400 max-w-xl font-['Plus_Jakarta_Sans'] h-8">
+                    I build digital frameworks specializing in <span id="dynamic-typing" class="border-r border-stone-400 dark:border-stone-500 pr-1"></span>
+                </p>
+                <div class="flex flex-col sm:flex-row items-center gap-6 pt-4">
+                    <a href="#projects" class="w-full sm:w-auto text-center px-8 py-3.5 bg-studio-lightText text-studio-lightBg dark:bg-studio-darkText dark:text-studio-darkBg text-xs font-medium uppercase tracking-widest hover:opacity-90 transition-opacity">
+                        View Projects Index
+                    </a>
+                    <a href="#" class="w-full sm:w-auto text-center px-8 py-3.5 border border-stone-300 dark:border-stone-700 text-xs font-medium uppercase tracking-widest hover:bg-stone-200/40 dark:hover:bg-stone-800/40 transition-colors">
+                        Download Portfolio CV
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-28 max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-16 items-center scroll-reveal-section">
+            <div class="md:col-span-5">
+                <div class="bg-[#f0eee9] dark:bg-stone-800/40 p-4 rounded-sm shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Studio professional editorial portrait placeholder" class="w-full grayscale contrast-115 mix-blend-multiply dark:mix-blend-normal object-cover aspect-[4/5]">
+                </div>
+            </div>
+            <div class="md:col-span-7 space-y-8">
+                <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl italic">Philosophy & Objectives</h2>
+                <p class="text-stone-600 dark:text-stone-400 leading-relaxed text-base font-light">
+                    I am an independent frontend designer and engineering specialist. Rather than focusing on unnecessary graphic clutter, I build scalable structural digital environments. My systems lean heavily into typographical structure, micro-interaction logic, and highly optimized responsive viewports.
+                </p>
+                
+                <div class="grid grid-cols-3 gap-6 pt-4 border-t border-stone-200 dark:border-stone-800">
+                    <div>
+                        <div class="font-['Playfair_Display'] text-3xl text-studio-accent font-light">14+</div>
+                        <div class="text-[10px] uppercase tracking-widest text-stone-500 mt-1">Built Modules</div>
+                    </div>
+                    <div>
+                        <div class="font-['Playfair_Display'] text-3xl text-studio-accent font-light">08</div>
+                        <div class="text-[10px] uppercase tracking-widest text-stone-500 mt-1">Months Sandbox</div>
+                    </div>
+                    <div>
+                        <div class="font-['Playfair_Display'] text-3xl text-studio-accent font-light">12</div>
+                        <div class="text-[10px] uppercase tracking-widest text-stone-500 mt-1">Core Techs</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-28 bg-[#f5f4f0] dark:bg-[#181818] scroll-reveal-section">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center md:text-left max-w-xl mb-16">
+                    <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl italic mb-4">The Technical Blueprint</h2>
+                    <p class="text-xs uppercase tracking-widest text-stone-500 font-medium">Categorized capability score metrics index</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="space-y-6">
+                        <h3 class="text-xs uppercase font-semibold tracking-widest text-studio-accent border-b border-stone-300 dark:border-stone-700 pb-2">01 / Core Interface Layout</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-xs mb-1 font-medium"><span>Semantic HTML5 Structure</span><span>94%</span></div>
+                                <div class="w-full bg-stone-300 dark:bg-stone-800 h-[1px]"><div class="bg-studio-lightText dark:bg-studio-darkText h-[1px]" style="width: 94%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1 font-medium"><span>Tailwind CSS Architecture</span><span>90%</span></div>
+                                <div class="w-full bg-stone-300 dark:bg-stone-800 h-[1px]"><div class="bg-studio-lightText dark:bg-studio-darkText h-[1px]" style="width: 90%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1 font-medium"><span>Asynchronous Javascript ES6</span><span>85%</span></div>
+                                <div class="w-full bg-stone-300 dark:bg-stone-800 h-[1px]"><div class="bg-studio-lightText dark:bg-studio-darkText h-[1px]" style="width: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <h3 class="text-xs uppercase font-semibold tracking-widest text-studio-accent border-b border-stone-300 dark:border-stone-700 pb-2">02 / Workflow Automation</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-xs mb-1 font-medium"><span>Git / Command Line Control</span><span>88%</span></div>
+                                <div class="w-full bg-stone-300 dark:bg-stone-800 h-[1px]"><div class="bg-studio-lightText dark:bg-studio-darkText h-[1px]" style="width: 88%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1 font-medium"><span>Vercel / Cloud Deployment</span><span>80%</span></div>
+                                <div class="w-full bg-stone-300 dark:bg-stone-800 h-[1px]"><div class="bg-studio-lightText dark:bg-studio-darkText h-[1px]" style="width: 80%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1 font-medium"><span>Performance Profiling</span><span>85%</span></div>
+                                <div class="w-full bg-stone-300 dark:bg-stone-800 h-[1px]"><div class="bg-studio-lightText dark:bg-studio-darkText h-[1px]" style="width: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <h3 class="text-xs uppercase font-semibold tracking-widest text-studio-accent border-b border-stone-300 dark:border-stone-700 pb-2">03 / Communication Anchors</h3>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="border border-stone-300 dark:border-stone-700 text-[10px] uppercase tracking-wider px-3 py-1.5 font-medium">Clear Documentation</span>
+                            <span class="border border-stone-300 dark:border-stone-700 text-[10px] uppercase tracking-wider px-3 py-1.5 font-medium">Asynchronous Comms</span>
+                            <span class="border border-stone-300 dark:border-stone-700 text-[10px] uppercase tracking-wider px-3 py-1.5 font-medium">Structural Testing</span>
+                            <span class="border border-stone-300 dark:border-stone-700 text-[10px] uppercase tracking-wider px-3 py-1.5 font-medium">Typography Focus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-28 max-w-6xl mx-auto px-6 scroll-reveal-section">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+                <div>
+                    <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl italic mb-2">Selected Case Material</h2>
+                    <p class="text-xs uppercase tracking-widest text-stone-500">Curated interface solutions index registry</p>
+                </div>
+                
+                <div class="flex space-x-2 text-[10px] font-semibold tracking-widest uppercase">
+                    <button class="tab-filter-btn active-tab px-4 py-2 border border-stone-900 text-studio-lightBg bg-studio-lightText dark:border-stone-100 dark:text-studio-darkBg dark:bg-studio-darkText" data-filter="all">ALL WORKS</button>
+                    <button class="tab-filter-btn px-4 py-2 border border-stone-200 text-stone-500 hover:border-stone-400 dark:border-stone-800" data-filter="web">WEB LAYER</button>
+                    <button class="tab-filter-btn px-4 py-2 border border-stone-200 text-stone-500 hover:border-stone-400 dark:border-stone-800" data-filter="ui">APP UI</button>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12" id="studio-gallery">
+                <div class="gallery-item-card group space-y-4" data-category="web">
+                    <div class="overflow-hidden bg-[#e6e4df] aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80" alt="Architectural design firm landing page layout view" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0">
+                    </div>
+                    <div class="space-y-2">
+                        <span class="text-[10px] uppercase tracking-widest text-studio-accent font-semibold">Web Layer module</span>
+                        <h3 class="font-['Playfair_Display'] text-xl font-medium">Nordic Design Repository</h3>
+                        <p class="text-xs text-stone-500 dark:text-stone-400 font-light leading-relaxed">A minimalist showcase application engineered for structural architecture archives requiring precise alignment indices.</p>
+                        <div class="flex gap-4 pt-2 text-[10px] font-bold tracking-widest uppercase border-t border-stone-200/80 dark:border-stone-800/80">
+                            <a href="#" class="hover:text-studio-accent transition-colors">Live View //</a>
+                            <a href="#" class="text-stone-400 hover:text-studio-lightText dark:hover:text-studio-darkText transition-colors">GitHub Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item-card group space-y-4 md:translate-y-6" data-category="ui">
+                    <div class="overflow-hidden bg-[#e6e4df] aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Typography focused mobile editorial system dashboard view" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0">
+                    </div>
+                    <div class="space-y-2">
+                        <span class="text-[10px] uppercase tracking-widest text-studio-accent font-semibold">App UI component</span>
+                        <h3 class="font-['Playfair_Display'] text-xl font-medium">Eidos Journal Framework</h3>
+                        <p class="text-xs text-stone-500 dark:text-stone-400 font-light leading-relaxed">An atomic, fluid layout library developed using CSS grids to provide optimal visual hierarchies on text-heavy screens.</p>
+                        <div class="flex gap-4 pt-2 text-[10px] font-bold tracking-widest uppercase border-t border-stone-200/80 dark:border-stone-800/80">
+                            <a href="#" class="hover:text-studio-accent transition-colors">Live View //</a>
+                            <a href="#" class="text-stone-400 hover:text-studio-lightText dark:hover:text-studio-darkText transition-colors">GitHub Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item-card group space-y-4" data-category="web">
+                    <div class="overflow-hidden bg-[#e6e4df] aspect-[4/3]">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Corporate intranet portal wireframe implementation view" class="w-full h-full object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0">
+                    </div>
+                    <div class="space-y-2">
+                        <span class="text-[10px] uppercase tracking-widest text-studio-accent font-semibold">Web Layer module</span>
+                        <h3 class="font-['Playfair_Display'] text-xl font-medium">Struktur Portal Framework</h3>
+                        <p class="text-xs text-stone-500 dark:text-stone-400 font-light leading-relaxed">A completely asynchronous data table controller operating inside a beautiful, custom light/dark theme environment.</p>
+                        <div class="flex gap-4 pt-2 text-[10px] font-bold tracking-widest uppercase border-t border-stone-200/80 dark:border-stone-800/80">
+                            <a href="#" class="hover:text-studio-accent transition-colors">Live View //</a>
+                            <a href="#" class="text-stone-400 hover:text-studio-lightText dark:hover:text-studio-darkText transition-colors">GitHub Source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="py-28 bg-[#f5f4f0] dark:bg-[#181818] scroll-reveal-section">
+            <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16">
+                
+                <div class="space-y-12">
+                    <h2 class="font-['Playfair_Display'] text-2xl md:text-3xl italic border-b border-stone-300 dark:border-stone-700 pb-4">Academic Registries</h2>
+                    <div class="border-l border-stone-300 dark:border-stone-700 space-y-10 pl-6 ml-2">
+                        <div class="relative">
+                            <div class="absolute -left-[29px] top-1.5 bg-studio-accent h-2 w-2 rounded-full"></div>
+                            <span class="text-[10px] font-semibold tracking-widest text-studio-accent uppercase">2023 — Current Standings</span>
+                            <h4 class="text-lg font-medium mt-1">Bachelor of Computer Science & Systems Engineering</h4>
+                            <p class="text-xs font-light text-stone-500 dark:text-stone-400">Metropolis Institute of Tech</p>
+                            <p class="text-xs text-stone-400 dark:text-stone-500 mt-2 font-light">Deep core focus path traversing responsive programmatic paradigms and client rendering engine architecture metrics.</p>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[29px] top-1.5 bg-stone-400 h-2 w-2 rounded-full"></div>
+                            <span class="text-[10px] font-semibold tracking-widest text-stone-400 uppercase">2021 — 2023 Block</span>
+                            <h4 class="text-lg font-medium mt-1">Advanced Logic & Scientific Credentials (HSC)</h4>
+                            <p class="text-xs font-light text-stone-500 dark:text-stone-400">Academy of Higher Learning</p>
+                            <p class="text-xs text-stone-400 dark:text-stone-500 mt-2 font-light">Earned foundational operational knowledge parameters covering advanced computational logic modules.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-12">
+                    <h2 class="font-['Playfair_Display'] text-2xl md:text-3xl italic border-b border-stone-300 dark:border-stone-700 pb-4">Operational Experience</h2>
+                    <div class="border-l border-stone-300 dark:border-stone-700 space-y-10 pl-6 ml-2">
+                        <div class="relative">
+                            <div class="absolute -left-[29px] top-1.5 bg-studio-lightText dark:bg-studio-darkText h-2 w-2 rounded-full"></div>
+                            <span class="text-[10px] font-semibold tracking-widest text-studio-accent uppercase">3 Months Contractual</span>
+                            <h4 class="text-lg font-medium mt-1">Frontend Engineering Contributor</h4>
+                            <p class="text-xs font-light text-stone-500 dark:text-stone-400">Aura Source Laboratories</p>
+                            <ul class="text-xs text-stone-400 dark:text-stone-500 mt-2 space-y-1 list-disc pl-4 font-light">
+                               <li>Refactored custom styling variables to decrease core layout delivery payloads.</li>
+                               <li>Conducted user experience audits ensuring alignment with modern web standards.</li>
+                            </ul>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[29px] top-1.5 bg-stone-400 h-2 w-2 rounded-full"></div>
+                            <span class="text-[10px] font-semibold tracking-widest text-stone-400 uppercase">Fictional System Sandbox</span>
+                            <h4 class="text-lg font-medium mt-1">Junior Interface Sandbox Apprentice</h4>
+                            <p class="text-xs font-light text-stone-500 dark:text-stone-400">Logos Design Labs</p>
+                            <ul class="text-xs text-stone-400 dark:text-stone-500 mt-2 space-y-1 list-disc pl-4 font-light">
+                               <li>Constructed pixel-perfect responsive templates across diverse device viewports.</li>
+                               <li>Maintained and document clean reusable layout logic blocks.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="achievements" class="py-28 max-w-6xl mx-auto px-6 scroll-reveal-section">
+            <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl italic text-center mb-16">System Milestones & Certification Logs</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border border-stone-200 dark:border-stone-800 p-8 space-y-4">
+                    <span class="text-xs font-semibold font-['Playfair_Display'] italic text-studio-accent">01 / Competition Recognition</span>
+                    <h4 class="font-medium text-lg leading-tight">Top 10 Finalist — Nordic Sprint Hack</h4>
+                    <p class="text-xs font-light text-stone-500 dark:text-stone-400 leading-relaxed">Recognized for delivering a highly structured, valid HTML template structure within a strict development timeline.</p>
+                </div>
+                <div class="border border-stone-200 dark:border-stone-800 p-8 space-y-4">
+                    <span class="text-xs font-semibold font-['Playfair_Display'] italic text-studio-accent">02 / Algorithmic Validation</span>
+                    <h4 class="font-medium text-lg leading-tight">Advanced Javascript ES6+ Accreditation</h4>
+                    <p class="text-xs font-light text-stone-500 dark:text-stone-400 leading-relaxed">Completed formal evaluation benchmarks covering modular scripting patterns and document object tree parsing logic.</p>
+                </div>
+                <div class="border border-stone-200 dark:border-stone-800 p-8 space-y-4">
+                    <span class="text-xs font-semibold font-['Playfair_Display'] italic text-studio-accent">03 / Continuous Cadence</span>
+                    <h4 class="font-medium text-lg leading-tight">180+ Automated Logic Challenges</h4>
+                    <p class="text-xs font-light text-stone-500 dark:text-stone-400 leading-relaxed">Maintained solid activity parameters solving design breakpoint issues and cleaning up script error bugs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-28 bg-[#f5f4f0] dark:bg-[#181818] scroll-reveal-section">
+            <div class="max-w-xl mx-auto px-6 space-y-12">
+                <div class="text-center space-y-2">
+                    <h2 class="font-['Playfair_Display'] text-3xl md:text-4xl italic">Initiate Studio Dialogue</h2>
+                    <p class="text-xs uppercase tracking-widest text-stone-500 font-medium">Basic payload query parameters form validation</p>
+                </div>
+                
+                <form id="studio-contact-form" class="space-y-6" novalidate>
+                    <div class="space-y-1">
+                        <label for="form-name-field" class="text-[10px] uppercase tracking-widest font-semibold text-stone-500">Sender Identity (Name)</label>
+                        <input type="text" id="form-name-field" required class="w-full bg-transparent border-b border-stone-300 dark:border-stone-700 py-2 text-sm focus:outline-none focus:border-studio-accent transition-colors text-stone-900 dark:text-stone-100 font-light">
+                        <p class="field-error-alert text-[10px] text-rose-500 uppercase tracking-wider font-medium mt-1 hidden">Identity context cannot parameter map to null.</p>
+                    </div>
+                    
+                    <div class="space-y-1">
+                        <label for="form-email-field" class="text-[10px] uppercase tracking-widest font-semibold text-stone-500">Routing Node Endpoint (Email)</label>
+                        <input type="email" id="form-email-field" required class="w-full bg-transparent border-b border-stone-300 dark:border-stone-700 py-2 text-sm focus:outline-none focus:border-studio-accent transition-colors text-stone-900 dark:text-stone-100 font-light">
+                        <p class="field-error-alert text-[10px] text-rose-500 uppercase tracking-wider font-medium mt-1 hidden">Provided entry fails standard electronic mailing formatting arrays.</p>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label for="form-subject-field" class="text-[10px] uppercase tracking-widest font-semibold text-stone-500">Dialogue Topic Header (Subject)</label>
+                        <input type="text" id="form-subject-field" required class="w-full bg-transparent border-b border-stone-300 dark:border-stone-700 py-2 text-sm focus:outline-none focus:border-studio-accent transition-colors text-stone-900 dark:text-stone-100 font-light">
+                        <p class="field-error-alert text-[10px] text-rose-500 uppercase tracking-wider font-medium mt-1 hidden">Subject parameters missing identification data.</p>
+                    </div>
+
+                    <div class="space-y-1">
+                        <label for="form-message-field" class="text-[10px] uppercase tracking-widest font-semibold text-stone-500">Core Query Text Payload (Message)</label>
+                        <textarea id="form-message-field" rows="4" required class="w-full bg-transparent border-b border-stone-300 dark:border-stone-700 py-2 text-sm focus:outline-none focus:border-studio-accent transition-colors text-stone-900 dark:text-stone-100 font-light resize-none"></textarea>
+                        <p class="field-error-alert text-[10px] text-rose-500 uppercase tracking-wider font-medium mt-1 hidden">Message context array length must be greater than zero.</p>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-studio-lightText text-studio-lightBg dark:bg-studio-darkText dark:text-studio-darkBg text-xs font-semibold uppercase tracking-widest hover:opacity-90 transition-opacity">
+                        Dispatch Query Packet
+                    </button>
+                </form>
+
+                <div class="flex justify-center space-x-8 text-sm border-t border-stone-200 dark:border-stone-800 pt-8">
+                    <a href="#" class="text-stone-400 hover:text-studio-lightText dark:hover:text-studio-darkText transition-colors" aria-label="Github Profile Link Registry"><i class="fa-brands fa-github mr-1"></i> GITHUB</a>
+                    <a href="#" class="text-stone-400 hover:text-studio-lightText dark:hover:text-studio-darkText transition-colors" aria-label="LinkedIn Profile Connection Endpoint"><i class="fa-brands fa-linkedin-in mr-1"></i> LINKEDIN</a>
+                    <a href="#" class="text-stone-400 hover:text-studio-lightText dark:hover:text-studio-darkText transition-colors" aria-label="Twitter X Platform Registry"><i class="fa-brands fa-x-twitter mr-1"></i> TWITTER</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-studio-lightBg dark:bg-studio-darkBg border-t border-stone-200 dark:border-stone-800 py-10 text-xs text-stone-400">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 ARCHITECTURAL SANDBOX FRAMEWORK. ANONYMOUS DEPLOYMENT.</p>
+            <div class="flex space-x-6 text-[10px] font-semibold uppercase tracking-wider">
+                <a href="#home" class="hover:text-studio-accent">INDEX TOP</a>
+                <a href="#projects" class="hover:text-studio-accent">COLLECTIONS</a>
+                <a href="#contact" class="hover:text-studio-accent">DIALOGUE</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="floating-ascent-trigger" class="fixed bottom-8 right-8 p-3.5 bg-studio-lightText text-studio-lightBg dark:bg-studio-darkText dark:text-studio-darkBg rounded-full shadow-lg transition-all duration-300 translate-y-24 opacity-0 z-50 hover:-translate-y-1" aria-label="Scroll back directly to upper bound viewport area">
+        <i class="fa-solid fa-arrow-up text-xs"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
