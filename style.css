@@ -1,0 +1,45 @@
+/* Custom Presentation Parameters: Studio Theme Stylesheet Core */
+
+/* Setup scroll mechanics context bounds */
+html {
+    scroll-padding-top: 80px;
+}
+
+/* Interactivity Scroll Reveal State Anchors */
+.scroll-reveal-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 1.1s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.1s cubic-bezier(0.215, 0.61, 0.355, 1);
+    will-change: transform, opacity;
+}
+
+.scroll-reveal-section.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Typographic Insertion Cursor Pulse Loop Animation */
+.text-typing-indicator {
+    animation: editorialCursorPulse 1s step-end infinite;
+}
+
+@keyframes editorialCursorPulse {
+    from, to { border-color: transparent }
+    50% { border-color: #8c7853 }
+}
+
+/* Gallery Module Filter Animation Controls */
+.gallery-item-card {
+    animation: galleryFadeEntry 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes galleryFadeEntry {
+    from {
+        opacity: 0;
+        transform: scale(0.98) translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
